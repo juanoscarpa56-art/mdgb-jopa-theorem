@@ -609,13 +609,14 @@ section{
 
 /* ANIMACIONES */
 
+
 .reveal{
 
     opacity:1;
 
-    transform:none;
+    transform:translateY(0);
 
-    transition:none;
+    transition:.6s ease;
 
 }
 
@@ -624,7 +625,7 @@ section{
 
     opacity:1;
 
-    transform:none;
+    transform:translateY(0);
 
 }
 @keyframes appear{
