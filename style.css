@@ -615,14 +615,18 @@ section{
 
     transform:translateY(40px);
 
-    animation:appear linear;
-
-    animation-timeline:view();
-
-    animation-range:entry 0% cover 35%;
+    transition:1s ease;
 
 }
 
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
 @keyframes appear{
 
     from{
