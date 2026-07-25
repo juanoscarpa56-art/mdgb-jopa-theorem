@@ -1,344 +1,845 @@
+/* ==========================================
+   JOURNAL OF INFINITE LOVE
+   STYLE.CSS - PARTE 1
+========================================== */
+
 *{
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
 
 body{
 
-font-family: Georgia, serif;
+    font-family:"Source Serif 4", Georgia, serif;
 
-background:#faf8f3;
+    background:#f4f1ea;
 
-color:#111;
+    color:#1d1d1d;
 
-margin:0;
+    line-height:1.8;
 
-transition:.5s;
+    letter-spacing:.2px;
+
+    transition:.4s;
 
 }
 
 
+/* BOTÓN MODO OSCURO */
 
 #themeToggle{
 
-position:fixed;
+    position:fixed;
 
-right:20px;
+    top:20px;
 
-top:20px;
+    right:20px;
 
-border:none;
+    width:50px;
 
-padding:12px;
+    height:50px;
 
-border-radius:50%;
+    border:none;
 
-cursor:pointer;
+    border-radius:50%;
 
-font-size:20px;
+    background:#8b0000;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+    z-index:999;
 
 }
 
 
+/* ENCABEZADO */
 
 .journal-header{
 
-display:flex;
+    background:white;
 
-justify-content:space-between;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 
-align-items:center;
+}
 
-padding:30px;
 
-border-bottom:3px solid #1b2745;
+.journal-top{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px;
 
 }
 
 
 .logo{
 
-font-size:60px;
+    font-size:70px;
 
 }
 
 
-.journal-header h1{
+.journal-name h1{
 
-font-size:30px;
+    font-family:"Cormorant Garamond",serif;
 
-margin:0;
+    font-size:38px;
+
+    margin-bottom:8px;
 
 }
 
 
-.journal-header p{
+.journal-name p{
 
-font-style:italic;
+    color:#666;
+
+    font-style:italic;
 
 }
 
 
 .metadata{
 
-text-align:right;
+    text-align:right;
+
+    line-height:1.8;
+
+    font-size:15px;
 
 }
 
 
+.journal-line{
+
+    height:8px;
+
+    background:#8b0000;
+
+}
+
+
+/* DOI */
 
 .doi{
 
-padding:15px 40px;
+    background:white;
 
-border-bottom:1px solid #aaa;
+    padding:18px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    border-bottom:1px solid #ddd;
 
 }
 
 
+/* PUBLICACIÓN */
+
+.publication-info{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin:40px auto;
+
+    max-width:1000px;
+
+}
+
+
+.pub-item{
+
+    background:white;
+
+    padding:25px;
+
+    min-width:200px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+
+.pub-item h4{
+
+    color:#8b0000;
+
+    margin-bottom:8px;
+
+}
+
+
+/* CONTENIDO */
 
 main{
 
-max-width:1100px;
+    max-width:1100px;
 
-margin:auto;
+    margin:auto;
 
-padding:30px;
-
-}
-
-
-
-.paper-title{
-
-text-align:center;
+    padding:40px;
 
 }
-
-
-.paper-title h2{
-
-font-size:45px;
-
-}
-
-
-
-.paper-title h3{
-
-font-style:italic;
-
-font-weight:normal;
-
-}
-
-
-
-.authors{
-
-display:flex;
-
-justify-content:center;
-
-gap:80px;
-
-}
-
 
 
 section{
 
-margin-bottom:50px;
+    margin-bottom:70px;
 
 }
 
 
-.box{
+/* TÍTULO */
 
-border:2px solid #333;
+.paper-title{
 
-padding:25px;
-
-background:white;
-
-font-size:20px;
-
-}
-
-
-.question{
-
-font-size:22px;
-
-font-weight:bold;
-
-}
-
-
-
-.keywords{
-
-padding:15px;
-
-border-top:1px solid;
-
-border-bottom:1px solid;
-
-}
-
-
-
-.card{
-
-border-left:5px solid #8b0000;
-
-padding:15px;
-
-margin:20px;
-
-background:white;
-
-}
-
-
-
-.final{
-
-text-align:center;
-
-}
-
-
-#heartEquation{
-
-font-size:55px;
-
-animation:pulse 2s infinite;
-
-}
-
-
-
-.secret{
-
-font-style:italic;
-
-font-size:20px;
-
-}
-
-
-
-/* animación scroll */
-
-.reveal{
-
-animation:appear linear;
-
-animation-timeline:view();
-
-animation-range:entry 0% cover 30%;
-
-}
-
-
-
-@keyframes appear{
-
-from{
-
-opacity:0;
-
-transform:translateY(50px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:none;
-
-}
-
-}
-
-
-
-@keyframes pulse{
-
-50%{
-
-transform:scale(1.1);
-
-}
-
-}
-
-
-
-
-
-.dark{
-
-background:#111;
-
-color:white;
-
-}
-
-
-.dark .box,
-.dark .card{
-
-background:#222;
-
-}
-
-
-
-@media(max-width:700px){
-
-.journal-header{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-
-.metadata{
-
-text-align:center;
-
-margin-top:20px;
-
-}
-
-
-
-.authors{
-
-flex-direction:column;
-
-gap:10px;
+    text-align:center;
 
 }
 
 
 .paper-title h2{
 
-font-size:30px;
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:55px;
+
+    margin-bottom:20px;
 
 }
 
 
-#heartEquation{
+.paper-title h3{
 
-font-size:35px;
+    font-style:italic;
+
+    color:#555;
+
+    font-weight:400;
+
+    max-width:900px;
+
+    margin:auto;
 
 }
+
+/* ==========================================
+   CONTENIDO DEL ARTÍCULO
+========================================== */
+
+.authors{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:80px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.author{
+
+    background:white;
+
+    padding:25px;
+
+    width:320px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.author h4{
+
+    color:#8b0000;
+
+    margin-bottom:10px;
+
+    font-size:22px;
+
+}
+
+.abstract{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.abstract h2{
+
+    margin-bottom:20px;
+
+}
+
+.question{
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#8b0000;
+
+    margin:30px 0;
+
+}
+
+.keywords{
+
+    margin-top:25px;
+
+    border-top:1px solid #ddd;
+
+    padding-top:20px;
+
+    color:#555;
+
+    font-style:italic;
+
+}
+
+.contents{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.contents h2{
+
+    margin-bottom:20px;
+
+}
+
+.contents ol{
+
+    margin-left:25px;
+
+    line-height:2.2;
+
+}
+
+.introduction{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.theorem{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.box{
+
+    margin-top:25px;
+
+    border-left:8px solid #8b0000;
+
+    background:#fafafa;
+
+    border-radius:8px;
+
+    padding:35px;
+
+    font-size:20px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.proof{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.formula{
+
+    text-align:center;
+
+    font-size:26px;
+
+    margin:35px 0;
+
+}
+
+.figure{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.diagram{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:30px;
+
+}
+
+.node{
+
+    background:white;
+
+    padding:15px 50px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.arrow{
+
+    font-size:30px;
+
+    color:#8b0000;
+
+}
+
+.final-node{
+
+    background:#8b0000;
+
+    color:white;
+
+}
+
+.corollaries{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.card{
+
+    border-left:6px solid #8b0000;
+
+    background:#fafafa;
+
+    padding:22px;
+
+    margin-top:20px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateX(8px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+
+}
+
+/* ==========================================
+   CONCLUSIÓN Y REFERENCIAS
+========================================== */
+
+.conclusion,
+.references{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.final-equation{
+
+    text-align:center;
+
+    font-size:36px;
+
+    margin:40px 0;
+
+    animation:pulse 2.5s infinite;
+
+}
+
+.secret{
+
+    text-align:center;
+
+    font-style:italic;
+
+    color:#666;
+
+    margin-top:30px;
+
+    font-size:18px;
+
+}
+
+.references ol{
+
+    margin-left:25px;
+
+    line-height:2;
+
+}
+
+.references li{
+
+    margin-bottom:10px;
+
+}
+
+
+/* PIE DE PÁGINA */
+
+.journal-footer{
+
+    margin-top:80px;
+
+    background:#1b2745;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    font-size:15px;
+
+}
+
+.journal-footer p{
+
+    margin:8px 0;
+
+}
+
+
+/* ANIMACIONES */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:appear linear;
+
+    animation-timeline:view();
+
+    animation-range:entry 0% cover 35%;
+
+}
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.06);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* MODO OSCURO */
+
+.dark{
+
+    background:#101214;
+
+    color:#ececec;
+
+}
+
+.dark .journal-header,
+.dark .author,
+.dark .abstract,
+.dark .contents,
+.dark .introduction,
+.dark .theorem,
+.dark .proof,
+.dark .figure,
+.dark .corollaries,
+.dark .conclusion,
+.dark .references,
+.dark .pub-item,
+.dark .card,
+.dark .box{
+
+    background:#1b1d20;
+
+    color:#ececec;
+
+}
+
+.dark .box{
+
+    border-left:8px solid #d33;
+
+}
+
+.dark .journal-footer{
+
+    background:#000;
+
+}
+
+.dark .journal-name p,
+.dark .secret,
+.dark .keywords{
+
+    color:#cfcfcf;
+
+}
+
+.dark .node{
+
+    background:#2b2d31;
+
+    color:white;
+
+}
+
+.dark .final-node{
+
+    background:#b30000;
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .journal-top{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:20px;
+
+    }
+
+    .metadata{
+
+        text-align:center;
+
+    }
+
+    .publication-info{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
+    }
+
+    .authors{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+    }
+
+    .paper-title h2{
+
+        font-size:38px;
+
+    }
+
+    .paper-title h3{
+
+        font-size:18px;
+
+    }
+
+    .formula{
+
+        font-size:20px;
+
+    }
+
+    .final-equation{
+
+        font-size:28px;
+
+    }
+
+    main{
+
+        padding:20px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .logo{
+
+        font-size:52px;
+
+    }
+
+    .journal-name h1{
+
+        font-size:28px;
+
+    }
+
+    .author{
+
+        width:100%;
+
+    }
+
+    .node{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    #themeToggle{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:18px;
+
+    }
 
 }
