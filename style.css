@@ -611,11 +611,11 @@ section{
 
 .reveal{
 
-    opacity:0;
+    opacity:1;
 
-    transform:translateY(40px);
+    transform:none;
 
-    transition:1s ease;
+    transition:none;
 
 }
 
@@ -624,7 +624,7 @@ section{
 
     opacity:1;
 
-    transform:translateY(0);
+    transform:none;
 
 }
 @keyframes appear{
