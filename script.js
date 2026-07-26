@@ -37,6 +37,8 @@ const downloadPDF = document.getElementById("downloadPDF");
 
 downloadPDF.addEventListener("click", () => {
 
+    alert("Generando PDF...");
+
     const element = document.querySelector("main");
 
     const options = {
