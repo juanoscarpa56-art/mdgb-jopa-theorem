@@ -32,3 +32,25 @@ themeToggle.addEventListener("click", () => {
         themeToggle.textContent = "🌙";
     }
 });
+
+const downloadPDF = document.getElementById("downloadPDF");
+
+downloadPDF.addEventListener("click", () => {
+
+    const element = document.querySelector("main");
+
+    const options = {
+        margin: 0.5,
+        filename: "The_Fundamental_MDGB-JOPA_Theorem.pdf",
+        image: { type: "jpeg", quality: 1 },
+        html2canvas: { scale: 2 },
+        jsPDF: {
+            unit: "in",
+            format: "a4",
+            orientation: "portrait"
+        }
+    };
+
+    html2pdf().set(options).from(element).save();
+
+});
